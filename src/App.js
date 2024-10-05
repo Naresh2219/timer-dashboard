@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header';
+import Timer from './components/Timer';
+import LapList from './components/LapList';
+import Alarm from './components/Alarm';
+import WorldClock from './components/WorldClock';
+import ToDoList from './components/ToDoList';
+import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header />
+      <main>
+        <section className="main-content">
+          <Timer />
+          <LapList />
+
+          <WorldClock />
+        </section>
+        <section className="left-sidebar">
+          <ToDoList />
+        </section>
+      </main>
     </div>
   );
 }
